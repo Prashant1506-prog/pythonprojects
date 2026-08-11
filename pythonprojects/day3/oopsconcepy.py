@@ -9,7 +9,7 @@ class BankAccount:
     def show_balance(self):
         print(self.balance)
 
-        
+
 class Student:
 
     def __init__(self, name, roll_no, marks):
@@ -33,3 +33,26 @@ student1 = Student("Prashant", 101, 85)
 
 student1.display()
 student1.result()
+
+class Animal:
+
+    def sound(self):
+        print("Some animal sound")
+
+
+class Dog(Animal):
+
+    def sound(self):
+        print("Bark")
+
+
+class Cat(Animal):
+
+    def sound(self):
+        print("Meow")
+
+
+animals = [Dog(), Cat()]
+
+for animal in animals:
+    animal.sound()
