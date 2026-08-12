@@ -80,3 +80,26 @@ dog.bark()
 
 cat.eat()
 cat.meow()
+
+# mro
+
+class A:
+    def show(self):
+        print("A")
+
+
+class B(A):
+    pass
+
+
+class C(A):
+    pass
+
+
+class D(B, C):
+    pass
+
+print(D.mro())
+
+d=D()
+d.show()
