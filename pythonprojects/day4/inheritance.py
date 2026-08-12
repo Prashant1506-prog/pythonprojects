@@ -103,3 +103,44 @@ print(D.mro())
 
 d=D()
 d.show()
+
+#mro 
+class A:
+    def show(self):
+        print("A")
+
+class B(A):
+    def show(self):
+        print("B")
+
+obj = B()
+obj.show()
+
+# code for mro
+
+class Company:
+    def work(self):
+        print("Company work")
+
+
+class Employee(Company):
+    def work(self):
+        print("Employee work")
+
+
+class Developer(Employee):
+    def work(self):
+        print("Developer writes code")
+
+
+class Manager(Employee):
+    def work(self):
+        print("Manager manages team")
+
+
+class TechLead(Developer, Manager):
+    pass
+
+
+person = TechLead()
+person.work()
