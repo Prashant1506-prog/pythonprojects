@@ -55,3 +55,24 @@ dog = Dog()
 dog.eat()
 dog.walk()
 dog.bark()
+
+#multiple inheritance
+
+class Father:
+    def skill1(self):
+        print("Father's skill")
+
+
+class Mother:
+    def skill2(self):
+        print("Mother's skill")
+
+
+class Child(Father, Mother):
+    def skill3(self):
+        print("Child's skill")
+
+child = Child()
+child.skill1()
+child.skill2()
+child.skill3()
