@@ -11,12 +11,16 @@ else:
 finally:
     print("Execution completed")
 
+#catch all the excepton ant their risks 
+
 try:
     res = "10" / 8
 except ArithmeticError:
     print(" arithmeticError")
 except:
     print("Error")
+
+#raisin an excepton by rAISE
 
 def set(age):
     if age < 0:
@@ -27,3 +31,19 @@ try:
     set(-3)
 except ValueError as e:
     print(e)
+
+#custom exception
+
+class MyCustomError(Exception):
+    pass
+
+def divide(a, b):
+    if b == 0:
+        raise MyCustomError("Division by zero is not allowed")
+    return a / b
+
+divide(10, 0)
+try:
+    result = divide(10, 0)
+except MyCustomError as e:
+    print(f"Caught an error: {e}")
