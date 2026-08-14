@@ -1,4 +1,4 @@
-"""n = int(input("Enter a number: "))
+n = int(input("Enter a number: "))
 s = int(input("Enter a number: "))
 
 
@@ -9,7 +9,7 @@ except ZeroDivisionError:
 else:
     print(f"Result of {n} / {s} is :{res} ")
 finally:
-    print("Execution completed")"""
+    print("Execution completed")
 
 try:
     res = "10" / 8
