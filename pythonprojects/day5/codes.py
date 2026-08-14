@@ -10,3 +10,10 @@ else:
     print(f"Result of {n} / {s} is :{res} ")
 finally:
     print("Execution completed")
+
+try:
+    res = "10" / 8
+except ArithmeticError:
+    print(" arithmeticError")
+except:
+    print("Error")
