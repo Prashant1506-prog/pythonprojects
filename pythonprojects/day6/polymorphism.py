@@ -72,3 +72,17 @@ e1 = Employee()
 e2 = Manager()
 e1.display()
 e2.display()
+
+#operator overloading using built in functions
+
+class A:
+    def __init__(self, value):
+        self.value = value
+    def __add__(self, other):
+        return self.value + other.value
+
+ob1 = A(5)
+ob2 = A(5)
+print(ob1 + ob2)
+print(ob1.__add__(ob2))
+print(ob1.value + ob2.value)
