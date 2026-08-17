@@ -32,3 +32,11 @@ class Cat(Animal):
 animals = [Dog(), Cat(), Animal()]
 for animal in animals:
     print(animal.sound())
+
+#polymorphism in built in function
+
+print(len("Hello"))  
+print(len([1, 2, 3])) 
+
+print(max(1, 3, 2))  
+print(max("a", "z", "m"))  
