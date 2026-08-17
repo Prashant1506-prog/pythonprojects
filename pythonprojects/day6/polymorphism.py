@@ -40,3 +40,15 @@ print(len([1, 2, 3]))
 
 print(max(1, 3, 2))  
 print(max("a", "z", "m"))  
+
+#method overriding
+
+class Animal:
+    def display(self):
+        print("This is an animal")
+class Dog(Animal):
+    def display(self):
+        print("This is dog")
+
+obj = Dog()
+obj.display()
