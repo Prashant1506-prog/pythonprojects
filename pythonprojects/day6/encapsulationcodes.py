@@ -25,3 +25,10 @@ class Student:
 s = Student("prashant")
 print("s._Student__name")
 
+#name mangling by dir()
+
+class Student:
+    def __init__(self, name):
+        self.__name = name
+s = Student("Prashant")
+print(dir(s))
