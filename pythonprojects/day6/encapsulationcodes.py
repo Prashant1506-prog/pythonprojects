@@ -15,4 +15,13 @@ emp = Employee()
 print(f"current salary: {emp.get_salary()}")
 emp.set_salary(int(input("Enter the new salary:")))
 print(f"Updated salary: {emp.get_salary()}")
-        
+
+
+#name mangling
+
+class Student:
+    def __init__(self, name):
+        self.__name = name
+s = Student("prashant")
+print("s._Student__name")
+
