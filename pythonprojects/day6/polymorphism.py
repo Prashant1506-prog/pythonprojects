@@ -16,3 +16,19 @@ print(calc.multiply(4))
 # Using multiple arguments
 print(calc.multiply(2, 3))       
 print(calc.multiply(2, 3, 4))
+
+#runtime polymorphism 
+
+class Animal:
+    def sound(self):
+        return "Some generic animal sound"
+class Dog(Animal):
+    def sound(self):
+        return "bhayuuu"
+class Cat(Animal):
+    def sound(self):
+        return "meaaayyuuuu"
+
+animals = [Dog(), Cat(), Animal()]
+for animal in animals:
+    print(animal.sound())
