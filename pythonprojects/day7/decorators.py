@@ -29,3 +29,19 @@ def add(a, b):
 
 print(add(5, 3))
 
+#function decortors 
+
+def simple_decorator(func):
+    def wrapper():
+        print(">>> Starting function")
+        func()
+        func()
+        print(">>> Function finished")
+    return wrapper
+
+@simple_decorator
+def greet():
+    print("Hello, World!")
+greet = simple_decorator(greet)
+greet()
+
