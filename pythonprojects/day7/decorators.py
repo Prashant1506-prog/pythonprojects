@@ -61,3 +61,30 @@ class Myclass:
         print("Inside")
 obj = Myclass()
 obj.my_method()
+
+#chaning multiple decorators
+
+def deco1(fun):
+    def inner():
+        x = fun()
+        return x * x
+    return inner
+
+def deco2(fun):
+    def inner():
+        x = fun()
+        return x * 2
+    return inner
+
+@deco1
+@deco2
+def num():
+    return 5
+
+@deco2
+@deco1
+def num2():
+    return 5
+
+print(num())
+print(num2())
