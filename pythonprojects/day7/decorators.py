@@ -45,3 +45,19 @@ def greet():
 greet = simple_decorator(greet)
 greet()
 
+#method decorators
+
+def method_decorator(func):
+    def wrapper(self, *args, **kwargs):
+        print("before")
+        result = func(self, *args, **kwargs)
+        print("After")
+        return result
+    return wrapper
+
+class Myclass:
+    @method_decorator
+    def my_method(self):
+        print("Inside")
+obj = Myclass()
+obj.my_method()
